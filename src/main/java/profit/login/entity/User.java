@@ -1,11 +1,13 @@
 package profit.login.entity;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import profit.login.question_board.Entity.Board;
 
 import java.util.Collection;
 import java.util.Date;
@@ -19,7 +21,7 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false)
-    private String id;
+    private Long id;
 
     @Column(nullable = false)
     private String fullName;
@@ -33,8 +35,8 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private UserRole userRole;      // 권한
 
-//    @OneToMany(mappedBy = "user", orphanRemoval = true)
-//    private List<Board> boards;     // 작성글
+    @OneToMany(mappedBy = "user", orphanRemoval = true)
+    private List<Board> boards;     // 작성글
 
     @OneToMany(mappedBy = "user", orphanRemoval = true)
     private List<Like> likes;       // 유저가 누른 좋아요
