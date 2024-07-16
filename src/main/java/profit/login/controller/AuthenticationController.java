@@ -49,6 +49,7 @@ public class AuthenticationController {
         return ResponseEntity.ok(registeredUser);
     }
 
+
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> authenticate(@RequestBody LoginUserDto loginUserDto) {
         User authenticatedUser = authenticationService.authenticate(loginUserDto);
@@ -67,6 +68,7 @@ public class AuthenticationController {
         return ResponseEntity.ok(loginResponse);
     }
 
+
     @DeleteMapping("/logout/{id}")
     public ResponseEntity<Map<String, String>> logout(@PathVariable String id) {
         tokenRedisService.deleteRefreshToken(id);
@@ -74,6 +76,7 @@ public class AuthenticationController {
         response.put("message", "Logout successful");
         return ResponseEntity.ok(response);
     }
+    
 
 
 
