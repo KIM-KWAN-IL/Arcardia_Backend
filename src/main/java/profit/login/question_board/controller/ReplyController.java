@@ -12,7 +12,6 @@ import profit.login.question_board.dto.ReplyCreateRequest;
 import profit.login.question_board.response.ReplyWriteResponse;
 import profit.login.question_board.service.BoardService;
 import profit.login.question_board.service.CommentService;
-import profit.login.question_board.service.ReplyService;
 import profit.login.repository.UserRepository;
 
 import java.io.IOException;
