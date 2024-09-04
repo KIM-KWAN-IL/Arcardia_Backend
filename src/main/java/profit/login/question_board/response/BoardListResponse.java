@@ -8,7 +8,6 @@ import org.springframework.data.domain.Page;
 import profit.login.question_board.Entity.Board;
 import profit.login.question_board.dto.BoardSearchRequest;
 
-import java.util.List;
 
 @Getter
 @Setter

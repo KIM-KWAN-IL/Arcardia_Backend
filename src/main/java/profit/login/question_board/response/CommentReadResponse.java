@@ -3,7 +3,6 @@
 
     import lombok.Builder;
     import lombok.Data;
-    import profit.login.entity.UserRole;
     import profit.login.question_board.Entity.Comment;
 
     import java.util.List;

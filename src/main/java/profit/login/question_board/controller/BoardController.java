@@ -18,7 +18,6 @@ import profit.login.question_board.response.BoardWriteResponse;
 import profit.login.question_board.response.ErrorResponse;
 import profit.login.question_board.service.BoardService;
 import profit.login.question_board.service.CommentService;
-import profit.login.question_board.service.LikeService;
 import profit.login.question_board.service.UploadImageService;
 import profit.login.repository.UserRepository;
 import profit.login.service.AuthenticationService;
