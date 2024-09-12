@@ -69,7 +69,10 @@ public class LikeService {
 
         likeRepository.deleteByUserEmailAndBoardId(email, boardId);
     }
-
-
-
+    public Boolean checkLike(String email, Long boardId) {
+        return likeRepository.existsByUserEmailAndBoardId(email, boardId);
+    }
 }
+
+
+
