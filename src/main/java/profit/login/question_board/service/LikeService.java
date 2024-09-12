@@ -38,6 +38,23 @@ public class LikeService {
                 .board(board)
                 .build());
     }
+    @Transactional
+    public void addLikeToReply(String email, Long replyId) {
+        Reply reply = replyRepository.findById(replyId).get();
+        User loginUser = userRepository.findByEmail(email).get();
+        User boardUser = reply.getUser();
+
+        // 자신이 누른 좋아요가 아니라면
+        if (!boardUser.equals(loginUser)) {
+            boardUser.likeChange(boardUser.getReceivedLikeCnt() + 1);
+        }
+        reply.likeChange(reply.getLikeCnt() + 1);
+
+        likeRepository.save(Like.builder()
+                .user(loginUser)
+                .reply(reply)
+                .build());
+    }
 
 
 
