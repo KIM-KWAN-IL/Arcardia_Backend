@@ -35,6 +35,7 @@ develop 추가예정
 - /likes/add/{boardId}
 - /likes/delete{boardId}
 
+#추후에 Restful 하게 수정 필요
 ### DELETE
 - /auth/lougout/{id}
 - /auth/delete
