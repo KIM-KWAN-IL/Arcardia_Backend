@@ -1,3 +1,4 @@
+//정지
 pipeline {
     environment {
         repository = 'gcu-profit-dev.kr-central-2.kcr.dev/arcadia-nextjs/springboot-login'
