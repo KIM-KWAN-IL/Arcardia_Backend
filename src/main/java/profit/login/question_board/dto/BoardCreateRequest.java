@@ -1,3 +1,4 @@
+// BoardDTO 와 통일 할수있을듯
 package profit.login.question_board.dto;
 
 import lombok.Data;
