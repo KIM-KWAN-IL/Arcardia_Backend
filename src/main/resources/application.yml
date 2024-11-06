@@ -1,3 +1,4 @@
+#통합필요
 spring:
   application:
     name: ArcadiaLogin
